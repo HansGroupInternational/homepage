@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gotta Get Scriptyyyy</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script type="text/javascript" src="https://ameobea.me/hash/script.js"></script>
+	<script type="text/javascript" src="https://ameobea.me/hash/viz.js"></script>
+	<link href="https://ameobea.me/hash/style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="app" ng-app="hasher" ng-controller="hashControl">
+		<div id="top" class="">
+			<div id="entry_header" class="col-md-12">
+				<input type="text" ng-model="toHash" ng-change="reHash(toHash)" ng-trim="false">
+			</div>
+			<div id="left-top" class="col-md-6">
+				<div id="constants" class="col-md-12">
+					<h2>Constants</h2>
+					<table width="100%">
+						<tr>
+							<td>428a2f98</td>
+							<td>71374491</td>
+							<td>b5c0fbcf</td>
+							<td>e9b5dba5</td>
+							<td>3956c25b</td>
+							<td>59f111f1</td>
+							<td>923f82a4</td>
+							<td>ab1c5ed5</td>
+						</tr>
+						<tr>
+							<td>d807aa98</td>
+							<td>12835b01</td>
+							<td>243185be</td>
+							<td>550c7dc3</td>
+							<td>72be5d74</td>
+							<td>80deb1fe</td>
+							<td>9bdc06a7</td>
+							<td>c19bf174</td>
+						</tr>
+						<tr>
+							<td>e49b69c1</td>
+							<td>efbe4786</td>
+							<td>0fc19dc6</td>
+							<td>240ca1cc</td>
+							<td>2de92c6f</td>
+							<td>4a7484aa</td>
+							<td>5cb0a9dc</td>
+							<td>76f988da</td>
+						</tr>
+						<tr>
+							<td>983e5152</td>
+							<td>a831c66d</td>
+							<td>b00327c8</td>
+							<td>bf597fc7</td>
+							<td>c6e00bf3</td>
+							<td>d5a79147</td>
+							<td>06ca6351</td>
+							<td>14292967</td>
+						</tr>
+						<tr>
+							<td>27b70a85</td>
+							<td>2e1b2138</td>
+							<td>4d2c6dfc</td>
+							<td>53380d13</td>
+							<td>650a7354</td>
+							<td>766a0abb</td>
+							<td>81c2c92e</td>
+							<td>92722c85</td>
+						</tr>
+						<tr>
+							<td>a2bfe8a1</td>
+							<td>a81a664b</td>
+							<td>c24b8b70</td>
+							<td>c76c51a3</td>
+							<td>d192e819</td>
+							<td>d6990624</td>
+							<td>f40e3585</td>
+							<td>106aa070</td>
+						</tr>
+						<tr>
+							<td>19a4c116</td>
+							<td>1e376c08</td>
+							<td>2748774c</td>
+							<td>34b0bcb5</td>
+							<td>391c0cb3</td>
+							<td>4ed8aa4a</td>
+							<td>5b9cca4f</td>
+							<td>682e6ff3</td>
+						</tr>
+						<tr>
+							<td>748f82ee</td>
+							<td>78a5636f</td>
+							<td>84c87814</td>
+							<td>8cc70208</td>
+							<td>90befffa</td>
+							<td>a4506ceb</td>
+							<td>bef9a3f7</td>
+							<td>c67178f2</td>
+						</tr>
+					</table>
+				</div>
+				<div id="message_schedule" compile="getW()" class="col-md-12"></div>
+				<div id="W_detail" compile="W_detail" class="col-md-12"></div>
+			</div>
+			<div id="right-part" class="col-md-6">
+				<div id="current" class="col-md-12">
+					<h3>Current Partial Hash</h3>
+					<!--TODO:
+						Fix this so that it uses the correct values for blocks higher than 0-->
+					<table width="100%">
+						<tr>
+							<td>{{prettyH(0)}}</td>
+							<td>{{prettyH(1)}}</td>
+							<td>{{prettyH(2)}}</td>
+							<td>{{prettyH(3)}}</td>
+							<td>{{prettyH(4)}}</td>
+							<td>{{prettyH(5)}}</td>
+							<td>{{prettyH(6)}}</td>
+							<td>{{prettyH(7)}}</td>
+						</tr>
+						<tr>
+							<td>{{result(0)}}</td>
+							<td>{{result(1)}}</td>
+							<td>{{result(2)}}</td>
+							<td>{{result(3)}}</td>
+							<td>{{result(4)}}</td>
+							<td>{{result(5)}}</td>
+							<td>{{result(6)}}</td>
+							<td>{{result(7)}}</td>
+						</tr>
+						<tr>
+							<td>{{ander(0,rawResult(0))}}</td>
+							<td>{{ander(1,rawResult(1))}}</td>
+							<td>{{ander(2,rawResult(2))}}</td>
+							<td>{{ander(3,rawResult(3))}}</td>
+							<td>{{ander(4,rawResult(4))}}</td>
+							<td>{{ander(5,rawResult(5))}}</td>
+							<td>{{ander(6,rawResult(6))}}</td>
+							<td>{{ander(7,rawResult(7))}}</td>
+						</tr>
+					</table>
+					= <b>{{ander(0,rawResult(0))+ander(0,rawResult(1))+ander(0,rawResult(2))+ander(0,rawResult(3))+ander(0,rawResult(4))+ander(0,rawResult(5))+ander(0,rawResult(6))+ander(0,rawResult(7))}}</b>
+					<br><hr>
+				</div>
+				<h3>Details</h3>
+				<div id="detail" class="col-md-12" compile="detail"></div>
+				<div id="detail2" class="col-md-12" compile="detail2"></div>
+				<div id="detail3" class="col-md-12" compile="detail3"></div>
+			</div>
+		</div>
+		<br>
+		<hr>
+		<div class="col-md-12">
+			<h3>Block Selection</h3>
+			<div id="block_selection" class="col-md-12">
+				<span ng-repeat-start="n in blocks"></span>
+					| <a ng-click="changeBlock(n)">{{n}}</a>
+				<span ng-repeat-end></span>
+			</div>
+			<h2>Main Table</h2>
+			<center><div id="mainTable" class="col-md-12" compile="genTable"></div></center>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+RewriteEngine on
+
+#RewriteCond %{HTTP:CF-Visitor} !'"scheme":"http"'
+#RewriteRule ^(.*)$ https://ameobea.me/$1 [L]
+
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+RewriteCond %{HTTP:CF-Visitor} '"scheme":"http"'
+RewriteRule ^(.*)$ https://ameobea.me/$1 [L]
+
+RewriteRule osutrack_dev/osutrack/user/(.*) osutrack_dev/osutrack/track.php?user=$1
+RewriteRule osutrack/user/(.*) osutrack/track.php?user=$1
+
+RewriteRule top50 osutrack/top50.php
+RewriteRule online osutrack/online.php

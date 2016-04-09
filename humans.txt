@@ -1,0 +1,29 @@
+/* TEAM */
+  Site owner: Casey Primozic (Also known as Ameo or AmeoBea)
+  Contact: me@ameo.link
+  Twitter: @ameobea10
+  From: Illinois, USA
+  Currently Lives: Indiana, USA
+
+  Osu!track Development Team:
+    Web Design: Reesespuffs
+    Twitter: @reesewashere
+    Location: USA
+
+    Coding Support: Redback
+    Site: https://rdbk.tv/
+    From: Australia
+
+    Project lead + Main Developer: Ameo
+    See above
+
+/* THANKS */
+  Programming Help: MinishGuy / Alex J
+    Github: @dalexj
+    From: USA
+
+/* SITE */
+  Last Update: 2015/02/18
+  Language: English
+  Doctype: HTML5
+  IDE: Sublime Text 3

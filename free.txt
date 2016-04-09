@@ -1,0 +1,1 @@
+for(x=0;x<25;x++){qx=$("#word").val();for(i=0;i<answers.length;i++){if(definitions[i]==qx){ax=answers[i];$("#response").val(ax[0]);$("#checkButton").trigger("click");break}}};

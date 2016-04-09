@@ -1,0 +1,15 @@
+<html>
+<head>
+  <title>AmeoTrack Visualizer</title>
+  <script type="text/javascript" src="inc/paper-full.js"></script>
+  <script type="text/paperscript" src="fireworks.js" canvas="main_canvas"></script>
+  <script type="text/javascript" src="inc/websocket.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <script type="text/javascript">
+    init_websocket("ws://ip.ameobea.me:7507/");
+  </script>
+  <canvas keepalive="true" style="background: black;" id="main_canvas" width="2000px" height="800px" resize></canvas>
+</body>
+</html>
