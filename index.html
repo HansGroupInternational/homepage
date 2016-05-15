@@ -1,97 +1,100 @@
 <html>
 <head>
-	<script src="/../../sources/jquery-2.1.0.min.js"></script>
-	<script src="https://ameobea.me/rando.js"></script>
-	<script type="text/javascript">
-	$(document).ready(()=>{
-		$("#word").html(createWord());
-		$("#mono").html(blockString(bsfBlock(4096, 1)))
-	});
+  <script src="/../../sources/jquery-2.1.0.min.js"></script>
+  <script src="https://ameobea.me/rando.js"></script>
+  <script type="text/javascript">
+  $(document).ready(()=>{
+    $("#word").html(createWord());
+    $("#mono").html(blockString(bsfBlock(4096, 1)))
+  });
 
   $("#ramble-expander").click(()=>{
     $('html, body').animate({
       scrollTop: $("#ramble-lock").offset().top
     }, 2000);
   });
-	</script>
-	<link rel="stylesheet" href="sources/bootstrap/css/bootstrap.css">
-	<script src="sources/bootstrap/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="sources/entryStyle.css">
-	<meta name="google-site-verification" content="Z5RrVRbf8yj5cOmlBk-gOchFeCfjdwt-nP__uanqWN0" />
-	<title>Casey Primozic</title>
+  </script>
+  <link rel="stylesheet" href="sources/bootstrap/css/bootstrap.css">
+  <script src="sources/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="sources/entryStyle.css">
+  <meta name="google-site-verification" content="Z5RrVRbf8yj5cOmlBk-gOchFeCfjdwt-nP__uanqWN0" />
+  <title>Casey Primozic</title>
 </head>
 <body>
 <div class='container content-header'>
-	<img src="/img/green_profile.png" height="100px" width="100px" class="pull-left">
-	<div id="navheaderlinks" class="center-block" style="margin-top: 25px;">
-		<ul>
-			<li class="pull-left first-link">
-				<a href="/osutrack/">osu!track</a>
-			</li>
-			<li class="pull-left spaced-links">
-				<a href="https://twitter.com/Ameobea10">Twitter</a>
-			</li>
-			<li class="pull-left spaced-links">
-				<a href="http://www.reddit.com/user/Ameobea">Reddit</a>
-			</li>
-			<li class="pull-left spaced-links">
-				<a href="mailto:me@ameo.link">Email</a>
-			</li>
-			<li class="pull-left spaced-links">
-				<a href="http://youtube.com/Caseyc104">Youtube</a>
-			</li>
-		</ul>
-	</div>
+  <img src="/img/green_profile.png" height="100px" width="100px" class="pull-left">
+  <div id="navheaderlinks" class="center-block" style="margin-top: 25px;">
+    <ul>
+      <li class="pull-left first-link">
+        <a href="/osutrack/">osu!track</a>
+      </li>
+      <li class="pull-left spaced-links">
+        <a href="https://twitter.com/Ameobea10">Twitter</a>
+      </li>
+      <li class="pull-left spaced-links">
+        <a href="http://www.reddit.com/user/Ameobea">Reddit</a>
+      </li>
+      <li class="pull-left spaced-links">
+        <a href="mailto:me@ameo.link">Email</a>
+      </li>
+      <li class="pull-left spaced-links">
+        <a href="http://youtube.com/Caseyc104">Youtube</a>
+      </li>
+    </ul>
+  </div>
 </div>
 <div class='container content-container'>
-	<h1>Ameo</h1>
-	<h3>Programming, Computer Games, School, <strike>Sleep</strike></h3>
-	<hr>
-	<div class="centered">
-		<h3>Contact Me</h3>
-		<p>The best is to send an email to me@ameo.link; I should get back to you within a day.  You can also try a Reddit PM or tweet at me and I'll get back to you as well! </p>
-		<hr>
-		<div class="col-md-6 text-left">
-			<h3>About Me</h3><br>
-			<p>I am a 19-year old student from Illinois, USA currently attending college in Valparaiso, Indiana.  I spend much of my spare time on the internet and seek to create things that people use and enjoy while also making a difference.</p>
-			<p>I have experience programming in many languages ranging from PHP, NodeJS, Python, Elixir, Ruby, and JavaScript, having created several large projects using them.  I also have moderate skills in the area of Linux and Unix server administration as well as some networking knowledge.  </p>
+  <h1>Ameo</h1>
+  <h3>Programming, Computer Games, School, <strike>Sleep</strike></h3>
+  <hr>
+  <div class="centered">
+    <h3>Contact Me</h3>
+    <p>The best is to send an email to me@ameo.link; I should get back to you within a day.  You can also try a Reddit PM or tweet at me and I'll get back to you as well! </p>
+    <hr>
+    <div class="col-md-6 text-left">
+      <h3>About Me</h3><br>
+      <p>I am a 19-year old student from Illinois, USA currently attending college in Valparaiso, Indiana.  I spend much of my spare time on the internet and seek to create things that people use and enjoy while also making a difference.</p>
+      <p>I have experience programming in many languages ranging from PHP, NodeJS, Python, Elixir, Ruby, and JavaScript, having created several large projects using them.  I also have moderate skills in the area of Linux and Unix server administration as well as some networking knowledge.  </p>
       <p>I'm very interested in quantitative finance and the mathematics behind the world's financial markets.  I plan on taking on a double major in finance during college and pursuing a career in a field involving computational finance or algorithmic trading.</p>
-		</div>
-		<div class="col-md-6 text-left">
-			<h3>Achievements + Creations</h3><br>
-			<p>I run stable, succesful, and secure production servers for a variety of different applications and self-host all my websites through virtual servers in the cloud.  </p>
-			<p>The crown jewel of my programming/web development career is <a href="/osutrack/">osu!track</a>.  It is by far the most complete and functional project I've ever worked on.  </p>
-			<p>I created a similar project, <a href="https://elotrack.net/">Elotrack</a>, which in many ways is an improvement over the original.  I'm also very proud of that tool.  </p>
-			<p>I made a cool visualizer for access to my websites and tools including my private image uploader, websites, etc.; You can watch them <a href="http://ameo.link/u/fireworks">here</a>.  </p>
-		</div>
-	</div>
+    </div>
+    <div class="col-md-6 text-left">
+      <h3>Achievements + Creations</h3><br>
+      <p>I run stable, succesful, and secure production servers for a variety of different applications and self-host all my websites through virtual servers in the cloud.  </p>
+      <p>The crown jewel of my programming/web development career is <a href="/osutrack/">osu!track</a>.  It is by far the most complete and functional project I've ever worked on.  </p>
+      <p>I created a similar project, <a href="https://elotrack.net/">Elotrack</a>, which in many ways is an improvement over the original.  I'm also very proud of that tool.  </p>
+      <p>I made a cool visualizer for access to my websites and tools including my private image uploader, websites, etc.; You can watch them <a href="http://ameo.link/u/fireworks">here</a>.  </p>
+    </div>
+  </div>
 </div>
 <div class='container content-container'>
-	<hr>
-	<div class="centered">
-		<a href="#ramble-content" id="ramble-expander" class="btn btn-info" data-toggle="collapse">Click to show the cool stuff</a>
-		<div id="ramble-content" class="collapse">
-			<p>I have a bit of an obsession with the nature of randomness.  Below I've created for you your very own word.  There never has been and never will be a word like it in the entire past or future of the world.  The way I have it set up, there are a total of <b>246,244,783,208,286,225,341,493,280,106,971,136</b> possible different words with lengths of 15-25 letters that you could see below.  If you close the page without recording your word, it will be lost forever and none like it will ever be created again.  </p>
-			<span id="wordarea"><p>Your word is:  <b><span id="word">Loading...</span></b></p></span>
-			<p>Doesn't it make you feel special, seeing something that nobody will ever see again?  </p>
-			<p>Now, here's something really amazing.  </p>
-			<hr>
-			<div id="mono">
-				Loading...
-			</div>
-			<hr>
-			That block of characters is the base64 representation of a 3-kilobyte file filled with random binary data.  That's 98,304 ones and zeros.  The number that represents the total possible unique files of that length that can be created is 29,593 digits long.  It's so incomprehensibly huge that it's almost impossible to think about it.  </p>
-			<p>And that's only three kiolbytes of data.  Trying to wrap my mind around the infinity of the universe is an awe-inspiring task.  It's things like this that help me to keep it all in perspective.</p>
-		</div>
-	</div>
+  <hr>
+  <div class="centered">
+    <a href="#ramble-content" id="ramble-expander" class="btn btn-info" data-toggle="collapse">Click to show the cool stuff</a>
+    <div id="ramble-content" class="collapse">
+      <p>I have a bit of an obsession with the nature of randomness.  Below I've created for you your very own word.  There never has been and never will be a word like it in the entire past or future of the world.  The way I have it set up, there are a total of <b>246,244,783,208,286,225,341,493,280,106,971,136</b> possible different words with lengths of 15-25 letters that you could see below.  If you close the page without recording your word, it will be lost forever and none like it will ever be created again.  </p>
+      <span id="wordarea"><p>Your word is:  <b><span id="word">Loading...</span></b></p></span>
+      <p>Doesn't it make you feel special, seeing something that nobody will ever see again?  </p>
+      <p>Now, here's something really amazing.  </p>
+      <hr>
+      <div id="mono">
+        Loading...
+      </div>
+      <hr>
+      That block of characters is the base64 representation of a 3-kilobyte file filled with random binary data.  That's 98,304 ones and zeros.  The number that represents the total possible unique files of that length that can be created is 29,593 digits long.  It's so incomprehensibly huge that it's almost impossible to think about it.  </p>
+      <p>And that's only three kiolbytes of data.  Trying to wrap my mind around the infinity of the universe is an awe-inspiring task.  It's things like this that help me to keep it all in perspective.</p>
+    </div>
+  </div>
+</div>
+<div id="footer" class="centered">
+  Site by Casey Primozic, &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script>
 </div>
 <script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-50797586-1', 'ameobea.me');
-	ga('send', 'pageview');
+  ga('create', 'UA-50797586-1', 'ameobea.me');
+  ga('send', 'pageview');
 </script>
 </body>
